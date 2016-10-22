@@ -1,5 +1,6 @@
 class GameObject{
   constructor(whoArray){
+    console.log("game being made")
     this.remainingWhos = whoArray
     this.answerWho = this.pickWho()
   }

@@ -2,12 +2,16 @@ const React = require ("react");
 const Filter = require ('./Filter')
 const Display = require('./Display')
 
-const GameView = React.createClass({
-  render: ()=>{
+let GameView = React.createClass({
+  getInitialState: function(){
+    console.log(this.props.gameObject);
+    return {remaining: this.props.gameObject.remainingWhos}
+  },
+  render: function(){
     return (
       <div>
         <h1>I am GameView</h1>
-        <Display />
+        <Display remainingWhos={this.state.remaining}/>
         <Filter />
       </div>
     )
