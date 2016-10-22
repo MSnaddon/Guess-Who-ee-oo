@@ -9,3 +9,12 @@ body{
   background:navy;
   color:#fff;
 }
+
+#remaining-display{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+.who-item-display{
+  padding: 0px 10px;
+}

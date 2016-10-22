@@ -1,14 +1,21 @@
 const React = require ("react");
-const Filter = require ('./Filter')
+const FilterFeature = require ('./FilterFeature')
 const Display = require('./Display')
 
-const GameView = React.createClass({
-  render: ()=>{
+let GameView = React.createClass({
+  getInitialState: function(){
+    return { remaining: this.props.gameObject.remainingWhos }
+  },
+  handleFilterSubmit: function(guessObject){
+    this.props.gameObject.makeGuess(guessObject)
+    this.setState({remaining: this.props.gameObject.remainingWhos});
+  },
+  render: function(){
     return (
       <div>
         <h1>I am GameView</h1>
-        <Display />
-        <Filter />
+        <Display remainingWhos={this.state.remaining}/>
+        <FilterFeature onSubmit={this.handleFilterSubmit} remainingWhos={this.state.remaining} />
       </div>
     )
   }
