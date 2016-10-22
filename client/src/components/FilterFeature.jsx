@@ -5,23 +5,23 @@ const FilterFeature = React.createClass({
   getInitialState: function(){
     return {focusFeature: "hat"}
   },
-  handleFeatureFilterChange: function(){
-
+  handleFeatureFilterChange: function(event){
+    this.setState({focusFeature: event.target.value})
   },
   render: function(){
     let featureTypeOptions = []
     // get list of ALL features across all Whos
-    this.props.remainingWhos.forEach(function(whoObject){
-      featureTypeOptions = featureTypeOptions.concat(Object.keys(whoObject))
+    this.props.remainingWhos.forEach( (whoObject) => {
+      featureTypeOptions = featureTypeOptions.concat( Object.keys(whoObject) )
     })
     //get unique elements and map into ReactDOM elements
-    featureTypeOptions = featureTypeOptions.filter( (featureType, index, self) => { return self.indexOf(featureType) === index } )
+    featureTypeOptions = featureTypeOptions
+    .filter((featureType, index, self) => {return self.indexOf(featureType) === index ;})
     .map((featureType, index)=>{
       return <option key={index} value={featureType}>{featureType}</option>
     })
 
 
-    console.log("filterFeature", featureTypeOptions)
 
     return(
     <div>
