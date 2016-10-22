@@ -24,6 +24,7 @@ describe("The game", function(){
   })
 
   it("should pick a winning candidate", function(){
+    // console.log(game.answerWho)
     assert.ok(game.answerWho);
   })
 

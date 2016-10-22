@@ -5,7 +5,7 @@ class GameObject{
   }
   pickWho(){
 
-    return ""
+    return this.remainingWhos[Math.floor(Math.random()*this.remainingWhos.length)]
   }
 
 }
