@@ -4,11 +4,10 @@ const Display = require('./Display')
 
 let GameView = React.createClass({
   getInitialState: function(){
-    console.log("GameObject", this.props.gameObject);
     return { remaining: this.props.gameObject.remainingWhos }
   },
-  handleFilterSubmit: function(){
-
+  handleFilterSubmit: function(guessObject){
+    this.props.gameObject.makeGuess(guessObject)
     this.setState({remaining: this.props.gameObject.remainingWhos});
   },
   render: function(){

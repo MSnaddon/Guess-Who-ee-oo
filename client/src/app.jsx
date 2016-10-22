@@ -8,17 +8,17 @@ window.onload = ()=>{
   // TODO get information for Game via api and pass render as callback
   let JsonData = [{
     name: "12th",
-    hat: true,
-    scarf: true,
+    hat: "Yes",
+    scarf: "Yes",
     attitude: "badass"
   },{
     name: "11th",
-    hat: true,
-    scarf: false
+    hat: "Yes",
+    scarf: "No"
   },{
     name: "10th",
-    hat: false,
-    scarf: false
+    hat: "No",
+    scarf: "No"
   }]
 
   ReactDom.render(
