@@ -27,7 +27,9 @@ const FilterFeature = React.createClass({
     })
     //get unique elements and map into ReactDOM elements
     featureTypeOptions = featureTypeOptions
-    .filter((featureType, index, self) => {return self.indexOf(featureType) === index ;})
+    .filter((featureType, index, self) => {
+      return self.indexOf(featureType) === index && !(featureType === "img");
+    })
     .map((featureType, index)=>{
       return <option key={index} value={featureType}>{featureType}</option>
     })

@@ -1,14 +1,18 @@
 const assert = require('assert')
 const GameObject = require('../GameObject')
 
-const JsonData = [{
-  name: "who",
-  hat: true,
-  scarf: true
+let JsonData = [{
+  name: "12th",
+  hat: "Yes",
+  scarf: "Yes",
 },{
-  name: "what",
-  hat: true,
-  scarf: false
+  name: "11th",
+  hat: "Yes",
+  scarf: "No"
+},{
+  name: "10th",
+  hat: "No",
+  scarf: "No"
 }]
 
 
@@ -20,7 +24,7 @@ describe("The game", function(){
   })
 
   it("should store a list of remaining candidates", function(){
-    assert.equal(game.remainingWhos.length, 2);
+    assert.equal(game.remainingWhos.length, 3);
   })
 
   it("should pick a winning candidate", function(){
@@ -28,7 +32,15 @@ describe("The game", function(){
     assert.ok(game.answerWho);
   })
 
-  it("")
+  it("should filter true from a correct guess",function(){
+    game.answerWho = {
+      name: "10th",
+      hat: "No",
+      scarf: "No"
+    }
+    game.makeGuess({category: "hat", value: "Yes"})
+    assert.equal(game.remainingWhos.length, 1)
+  })
 
   it("should have a functioning XNOR method", function(){
     assert.ok(!game.XNOR(true,false) );

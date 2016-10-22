@@ -13,7 +13,6 @@ let GameView = React.createClass({
   render: function(){
     return (
       <div>
-        <h1>I am GameView</h1>
         <Display remainingWhos={this.state.remaining}/>
         <FilterFeature onSubmit={this.handleFilterSubmit} remainingWhos={this.state.remaining} />
       </div>
