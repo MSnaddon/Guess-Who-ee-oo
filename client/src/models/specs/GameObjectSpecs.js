@@ -28,4 +28,12 @@ describe("The game", function(){
     assert.ok(game.answerWho);
   })
 
+  it("")
+
+  it("should have a functioning XNOR method", function(){
+    assert.ok(!game.XNOR(true,false) );
+    assert.ok(!game.XNOR(false,true) );
+    assert.ok( game.XNOR(true, true ) );
+    assert.ok( game.XNOR(false,false) );
+  })
 })
