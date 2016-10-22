@@ -9,7 +9,8 @@ window.onload = ()=>{
   let JsonData = [{
     name: "12th",
     hat: true,
-    scarf: true
+    scarf: true,
+    attitude: "badass"
   },{
     name: "11th",
     hat: true,
