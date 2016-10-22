@@ -7,3 +7,5 @@ const Filter = (props)=>{
     </div>
   )
 }
+
+module.exports = Filter;

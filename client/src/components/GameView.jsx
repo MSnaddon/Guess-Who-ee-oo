@@ -6,8 +6,9 @@ const GameView = React.createClass({
   render: ()=>{
     return (
       <div>
-        <Display remainingWho={this.props.gameObject.remaining}/>
-        <Filter onSubmit={this.props.gameObject.submitQuery}/>
+        <h1>I am GameView</h1>
+        <Display />
+        <Filter />
       </div>
     )
   }
@@ -15,3 +16,6 @@ const GameView = React.createClass({
 
 
 module.exports = GameView
+
+//onSubmit={this.props.gameObject.submitQuery}
+//remainingWho={this.props.gameObject.remaining}
