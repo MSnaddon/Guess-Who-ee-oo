@@ -2,9 +2,14 @@ const React = require ("react");
 const Filter = require ('./Filter')
 const Display = require('./Display')
 
-let GameView = React.createClass({
+const GameView = React.createClass({
   render: ()=>{
-    return <div><h1>This is GameView</h1></div>
+    return (
+      <div>
+        <Display remainingWho={this.props.gameObject.remaining}/>
+        <Filter onSubmit={this.props.gameObject.submitQuery}/>
+      </div>
+    )
   }
 })
 
