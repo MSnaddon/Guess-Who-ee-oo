@@ -11,7 +11,7 @@ const Display = (props)=>{
   })
   console.log(remainingDisplay);
   return (
-    <div id="remainingDisplay">
+    <div id="remaining-display">
       {remainingDisplay}
     </div>
   )
