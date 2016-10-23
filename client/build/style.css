@@ -9,8 +9,21 @@ body{
   background:navy;
   color:#fff;
 }
-/*filters div*/
 
+#game-header{
+ display:flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+
+/*filters div*/
+#filters{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 .button {
   background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
@@ -39,6 +52,9 @@ body{
   display:flex;
   flex-direction: row;
   flex-wrap:wrap;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .who-item-display{
   padding: 10px 10px;

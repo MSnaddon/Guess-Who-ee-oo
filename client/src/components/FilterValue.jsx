@@ -15,7 +15,7 @@ const FilterValue = (props) =>{
     })
 
     return (
-      <div id="game-filters">
+      <div id="value-filter">
         <select id="feature-types" value={props.focusValue} onChange={onChange}>
           <option disabled="disabled" value="default">---</option>
           {featureValueOptions}
@@ -24,7 +24,7 @@ const FilterValue = (props) =>{
       </div>
       )
   } else {
-    return (<div>Pick a category</div>)
+    return (<div></div>)
   }
 }
 

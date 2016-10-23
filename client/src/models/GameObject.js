@@ -13,7 +13,6 @@ class GameObject{
     this.remainingWhos = this.remainingWhos.filter((who)=>{
       return this.XNOR(correct, who[guessObject.category] === guessObject.value)
     })
-
   }
   XNOR(bool1, bool2){
     return (bool1 && bool2) || (!bool1 && !bool2)

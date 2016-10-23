@@ -28,7 +28,7 @@ const FilterFeature = React.createClass({
     //get unique elements and map into ReactDOM elements
     featureTypeOptions = featureTypeOptions
     .filter((featureType, index, self) => {
-      return self.indexOf(featureType) === index && !(featureType === "img");
+      return self.indexOf(featureType) === index && !(featureType[0] === "_");
     })
     .map((featureType, index)=>{
       return <option key={index} value={featureType}>{featureType}</option>
@@ -36,10 +36,12 @@ const FilterFeature = React.createClass({
 
     return(
       <div id="filters">
-        <select id="feature-types" value={this.state.focusFeature} onChange={this.handleFeatureFilterChange}>
-        <option  disabled="disabled" value="default">Select Feature</option>
-        {featureTypeOptions}
-      </select>
+        <div id="feature-filter">
+          <select id="feature-types" value={this.state.focusFeature} onChange={this.handleFeatureFilterChange}>
+            <option  disabled="disabled" value="default">Select Feature</option>
+            {featureTypeOptions}
+          </select>
+        </div>
 
       <FilterValue 
         focusFeature={this.state.focusFeature} 

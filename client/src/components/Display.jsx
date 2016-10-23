@@ -5,7 +5,7 @@ const Display = (props)=>{
     return (
       <div className="who-item-display" key={index}>
 
-        <img src={"./images/" + whoObject.img}/>
+        <img src={"./images/" + whoObject._img}/>
       </div>
       )
   })
