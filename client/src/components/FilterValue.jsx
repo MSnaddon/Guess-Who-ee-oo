@@ -15,12 +15,12 @@ const FilterValue = (props) =>{
     })
 
     return (
-      <div>
+      <div id="game-filters">
         <select id="feature-types" value={props.focusValue} onChange={onChange}>
           <option disabled="disabled" value="default">---</option>
           {featureValueOptions}
         </select>
-        <div onClick={props.onSubmit}>Submit</div>
+        <div className="button" onClick={props.onSubmit}>Submit</div>
       </div>
       )
   } else {

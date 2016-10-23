@@ -128,7 +128,7 @@ let jsonData = [{
   coatColour: "brown",
   glasses: "no",
   eyeColour: "brown",
-  img: "TwelvethDoctor.jpg"
+  img: "TwelfthDoctor.jpg"
 }]
 
 

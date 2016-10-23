@@ -35,7 +35,7 @@ const FilterFeature = React.createClass({
     })
 
     return(
-      <div>
+      <div id="filters">
         <select id="feature-types" value={this.state.focusFeature} onChange={this.handleFeatureFilterChange}>
         <option  disabled="disabled" value="default">Select Feature</option>
         {featureTypeOptions}

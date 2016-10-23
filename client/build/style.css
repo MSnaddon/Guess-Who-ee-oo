@@ -9,12 +9,37 @@ body{
   background:navy;
   color:#fff;
 }
+/*filters div*/
 
+
+.button {
+  background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+  background-color:#637aad;
+  border:1px solid #1e3994;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  font-weight:bold;
+  padding:6px 12px;
+  text-decoration:none;
+}
+.button:hover {
+  background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+}
+.button:active {
+  position:relative;
+  top:1px;
+}
+
+
+/*display*/
 #remaining-display{
   display:flex;
   flex-direction: row;
   flex-wrap:wrap;
 }
 .who-item-display{
-  padding: 0px 10px;
+  padding: 10px 10px;
 }

@@ -12,9 +12,15 @@ let GameView = React.createClass({
   },
   render: function(){
     return (
-      <div>
-        <Display remainingWhos={this.state.remaining}/>
-        <FilterFeature onSubmit={this.handleFilterSubmit} remainingWhos={this.state.remaining} />
+      <div id="game-container">
+        <div id="game-header">
+          <h1> Guess Who-ee-oo</h1>
+          <FilterFeature onSubmit={this.handleFilterSubmit} remainingWhos={this.state.remaining} />
+        </div>
+        <div>
+          <Display remainingWhos={this.state.remaining}/>
+          <audio src="./music/Doctor_Who.mp3" type="audio/mpeg" autoPlay loop/>
+        </div>
       </div>
     )
   }
