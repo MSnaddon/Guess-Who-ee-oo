@@ -42,10 +42,4 @@ describe("The game", function(){
     assert.equal(game.remainingWhos.length, 1)
   })
 
-  it("should have a functioning XNOR method", function(){
-    assert.ok(!game.XNOR(true,false) );
-    assert.ok(!game.XNOR(false,true) );
-    assert.ok( game.XNOR(true, true ) );
-    assert.ok( game.XNOR(false,false) );
-  })
 })

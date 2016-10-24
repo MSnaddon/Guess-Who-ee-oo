@@ -2,7 +2,7 @@ class GameObject{
   constructor(whoArray){
     this.remainingWhos = whoArray
     this.answerWho = this.pickWho()
-    console.log(this.answerWho)
+
   }
   pickWho(){
     //randomly assigned chosen who based on remaining whos
@@ -11,11 +11,8 @@ class GameObject{
   makeGuess(guessObject){
     let correct = this.answerWho[guessObject.category] === guessObject.value;
     this.remainingWhos = this.remainingWhos.filter((who)=>{
-      return this.XNOR(correct, who[guessObject.category] === guessObject.value)
+      return correct === (who[guessObject.category] === guessObject.value)
     })
-  }
-  XNOR(bool1, bool2){
-    return (bool1 && bool2) || (!bool1 && !bool2)
   }
 }
 
